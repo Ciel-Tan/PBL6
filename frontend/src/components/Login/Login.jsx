@@ -5,6 +5,8 @@ import "../fonts/iconic/css/material-design-iconic-font.min.css"
 
 import { useLoginFormik } from "../validate/Formik"
 
+import GoogleAuth from "../auth/GoogleAuth"
+import FacebookAuth from "../auth/FacebookAuth"
 
 const Login = () => {
     const formik = useLoginFormik()
@@ -16,7 +18,7 @@ const Login = () => {
                 <form className="login100-form validate-form" onSubmit={formik.handleSubmit}>
                     <span className="login100-form-title p-b-49">Login</span>
 
-                    <div className="wrap-input100 validate-input m-b-23" data-validate="Username is required">
+                    <div className="wrap-input100 validate-input" data-validate="Username is required">
                         <span className="label-input100">Email or username</span>
                         <input 
                             className="input100" 
@@ -34,7 +36,7 @@ const Login = () => {
                         <p className="errorMsg">{formik.errors.username}</p>
                     )}
 
-                    <div className="wrap-input100 validate-input" data-validate="Password is required">
+                    <div className="wrap-input100 validate-input m-t-23" data-validate="Password is required">
                         <span className="label-input100">Password</span>
                         <input 
                             className="input100" 
@@ -73,14 +75,9 @@ const Login = () => {
                         </div>
 
                         <div className="social-login">
-                            <button className="social-btn">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" className="icon" />
-                                Sign in with Google
-                            </button>
-                            <button className="social-btn">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" className="icon" />
-                                Sign in with Facebook
-                            </button>
+                            <GoogleAuth />
+
+                            <FacebookAuth />
                         </div>
                     </div>
                 </form>

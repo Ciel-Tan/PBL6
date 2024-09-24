@@ -537,6 +537,6 @@ iframe {
 
 .errorMsg {
   max-width: 100%;
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: rgb(248, 106, 106);
 }
