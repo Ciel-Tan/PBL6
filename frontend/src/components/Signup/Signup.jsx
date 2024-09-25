@@ -1,5 +1,5 @@
-import "../Login/login.css"
-import "../Login/util.css"
+import "../css/login.css"
+import "../css/util.css"
 
 import { useSignUpFormik } from "../validate/Formik"
 

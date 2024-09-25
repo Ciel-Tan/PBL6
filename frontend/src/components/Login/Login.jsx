@@ -1,5 +1,5 @@
-import "./login.css"
-import "./util.css"
+import "../css/login.css"
+import "../css/util.css"
 import "../fonts/font-awesome-4.7.0/css/font-awesome.min.css"
 import "../fonts/iconic/css/material-design-iconic-font.min.css"
 
