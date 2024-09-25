@@ -8,6 +8,8 @@ import { useLoginFormik } from "../validate/Formik"
 import GoogleAuth from "../auth/GoogleAuth"
 import FacebookAuth from "../auth/FacebookAuth"
 
+import { Link } from "react-router-dom";
+
 const Login = () => {
     const formik = useLoginFormik()
 
@@ -18,7 +20,7 @@ const Login = () => {
                 <form className="login100-form validate-form" onSubmit={formik.handleSubmit}>
                     <span className="login100-form-title p-b-49">Login</span>
 
-                    <div className="wrap-input100 validate-input" data-validate="Username is required">
+                    <div className="wrap-input100">
                         <span className="label-input100">Email or username</span>
                         <input 
                             className="input100" 
@@ -66,7 +68,9 @@ const Login = () => {
                     </div>
 
                     <div className="login-container">
-                        <p className="sign-up-text">Don't have an account? <a href="/signup">Sign up</a></p>
+                        <p className="sign-up-text">Don't have an account?
+                            <Link to="/signup"> Sign up</Link>
+                        </p>
 
                         <div className="divider">
                             <span className="line"></span>
